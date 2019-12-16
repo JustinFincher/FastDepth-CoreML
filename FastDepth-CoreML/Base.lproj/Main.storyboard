@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edf-aQ-qA1">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Live Image-->
+        <scene sceneID="SaG-TN-B8Q">
+            <objects>
+                <viewController id="edf-aQ-qA1" customClass="LiveImageViewController" customModule="DepthPrediction_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="noJ-LW-AEx">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqd-GS-VVI">
+                                <rect key="frame" x="452" y="36" width="462" height="462"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oqd-GS-VVI" secondAttribute="height" priority="900" id="jfa-cc-w3n"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULK-nV-M8I">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inference: xxx ms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VxH-Jq-g1X">
+                                        <rect key="frame" x="16" y="8" width="438" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="9"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Execution: xxx ms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7iV-kd-EfY">
+                                        <rect key="frame" x="464" y="11.5" width="438" height="9"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="9"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="fps: xx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-EA-MVi">
+                                        <rect key="frame" x="912" y="11.5" width="438" height="9"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="9"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor" red="0.4549019608" green="0.4549019608" blue="0.50196078430000002" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tKJ-EA-MVi" firstAttribute="width" secondItem="VxH-Jq-g1X" secondAttribute="width" id="1v5-dV-TCy"/>
+                                    <constraint firstItem="7iV-kd-EfY" firstAttribute="centerY" secondItem="VxH-Jq-g1X" secondAttribute="centerY" id="5Um-lz-Y8o"/>
+                                    <constraint firstAttribute="bottom" secondItem="VxH-Jq-g1X" secondAttribute="bottom" constant="8" id="CHk-ts-Shb"/>
+                                    <constraint firstAttribute="height" constant="32" id="JUh-Y3-bXr"/>
+                                    <constraint firstItem="7iV-kd-EfY" firstAttribute="leading" secondItem="VxH-Jq-g1X" secondAttribute="trailing" constant="10" id="dzH-W2-HoC"/>
+                                    <constraint firstAttribute="trailing" secondItem="tKJ-EA-MVi" secondAttribute="trailing" constant="16" id="m8Y-C8-gbh"/>
+                                    <constraint firstItem="VxH-Jq-g1X" firstAttribute="centerY" secondItem="ULK-nV-M8I" secondAttribute="centerY" id="mg1-ld-oUk"/>
+                                    <constraint firstItem="VxH-Jq-g1X" firstAttribute="top" secondItem="ULK-nV-M8I" secondAttribute="top" constant="8" id="qRE-cn-Heh"/>
+                                    <constraint firstItem="tKJ-EA-MVi" firstAttribute="centerY" secondItem="ULK-nV-M8I" secondAttribute="centerY" id="rNZ-iG-sI1"/>
+                                    <constraint firstItem="7iV-kd-EfY" firstAttribute="width" secondItem="VxH-Jq-g1X" secondAttribute="width" id="rY9-l8-q7w"/>
+                                    <constraint firstItem="VxH-Jq-g1X" firstAttribute="leading" secondItem="ULK-nV-M8I" secondAttribute="leading" constant="16" id="yee-Ru-fbq"/>
+                                    <constraint firstItem="tKJ-EA-MVi" firstAttribute="leading" secondItem="7iV-kd-EfY" secondAttribute="trailing" constant="10" id="yu9-eQ-bUL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKp-wK-9za" customClass="UIImageView">
+                                <rect key="frame" x="452" y="502" width="462" height="462"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qKp-wK-9za" secondAttribute="height" multiplier="1:1" id="YOH-hx-2HO"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" minimumValueImage="0.circle" catalog="system" maximumValueImage="10.circle" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-AW-PM9">
+                                <rect key="frame" x="14" y="972" width="1338" height="31"/>
+                                <connections>
+                                    <action selector="depthMaxValueChanged:" destination="edf-aQ-qA1" eventType="valueChanged" id="IRk-EO-lwu"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gdC-gL-MVz" firstAttribute="trailing" secondItem="ULK-nV-M8I" secondAttribute="trailing" id="0Pg-eI-p99"/>
+                            <constraint firstItem="Jzw-AW-PM9" firstAttribute="leading" secondItem="gdC-gL-MVz" secondAttribute="leading" constant="16" id="5qW-Bo-bnK"/>
+                            <constraint firstItem="qKp-wK-9za" firstAttribute="height" secondItem="oqd-GS-VVI" secondAttribute="height" id="Dpv-JI-nvm"/>
+                            <constraint firstItem="oqd-GS-VVI" firstAttribute="top" secondItem="ULK-nV-M8I" secondAttribute="bottom" constant="4" id="E7f-h2-m3u"/>
+                            <constraint firstItem="gdC-gL-MVz" firstAttribute="bottom" secondItem="Jzw-AW-PM9" secondAttribute="bottom" constant="2" id="JLX-vL-cRF"/>
+                            <constraint firstItem="ULK-nV-M8I" firstAttribute="top" secondItem="gdC-gL-MVz" secondAttribute="top" id="RLC-yo-6W1"/>
+                            <constraint firstItem="qKp-wK-9za" firstAttribute="top" secondItem="oqd-GS-VVI" secondAttribute="bottom" constant="4" id="Rpl-hW-bRk"/>
+                            <constraint firstItem="gdC-gL-MVz" firstAttribute="trailing" secondItem="Jzw-AW-PM9" secondAttribute="trailing" constant="16" id="UIy-oV-u4T"/>
+                            <constraint firstItem="ULK-nV-M8I" firstAttribute="leading" secondItem="gdC-gL-MVz" secondAttribute="leading" id="Uel-qX-Tsk"/>
+                            <constraint firstItem="Jzw-AW-PM9" firstAttribute="top" secondItem="qKp-wK-9za" secondAttribute="bottom" constant="8" id="ctg-Ez-d4a"/>
+                            <constraint firstItem="qKp-wK-9za" firstAttribute="centerX" secondItem="noJ-LW-AEx" secondAttribute="centerX" id="l34-hb-qyH"/>
+                            <constraint firstItem="oqd-GS-VVI" firstAttribute="centerX" secondItem="noJ-LW-AEx" secondAttribute="centerX" id="vIZ-7W-7JQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gdC-gL-MVz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Live Image" id="EZu-KF-uOx"/>
+                    <connections>
+                        <outlet property="depthSlider" destination="Jzw-AW-PM9" id="mRr-g1-pwF"/>
+                        <outlet property="drawingView" destination="qKp-wK-9za" id="hTF-MD-oL0"/>
+                        <outlet property="etimeLabel" destination="7iV-kd-EfY" id="QDa-N0-vio"/>
+                        <outlet property="fpsLabel" destination="tKJ-EA-MVi" id="XdJ-xd-l3x"/>
+                        <outlet property="inferenceLabel" destination="VxH-Jq-g1X" id="Jfz-0d-0A1"/>
+                        <outlet property="videoPreview" destination="oqd-GS-VVI" id="xPG-gw-n1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tty-tA-CDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366.6666666666667" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0.circle" catalog="system" width="64" height="60"/>
+        <image name="10.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
